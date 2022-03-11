@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gameScreen"
+    android:padding="20dp"
+    tools:context=".Difficulty"
+    android:background="@color/grey">
+
+    <LinearLayout
+        android:id="@+id/tutti2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:src="@drawable/tutti"/>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/tutti2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/difficulty"
+        android:orientation="horizontal" >
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/radioGroup">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Please, choose your difficulty : " />
+
+            <RadioButton
+                android:id="@+id/radioButtonEasy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Easy" />
+
+            <RadioButton
+                android:id="@+id/radioButtonMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medium" />
+
+            <RadioButton
+                android:id="@+id/radioButtonHard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hard" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playButtonContainer"
+        android:layout_below="@id/difficulty"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:text="Return" />
+
+
+</RelativeLayout>

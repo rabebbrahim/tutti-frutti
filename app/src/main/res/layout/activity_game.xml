@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/grey"
+    tools:context=".GameActivity">
+    <LinearLayout
+        android:id="@+id/tutti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:src="@drawable/tutti"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/scoreContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tutti">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total score : "
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/scoreNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="25dp" />
+
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tries left :"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/tries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/choiceContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scoreContainer"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/prop1"
+                android:layout_width="match_parent"
+                android:minHeight="45dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/prune" />
+
+
+            <Spinner
+                android:id="@+id/spinnerChoice1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/fruitsSelection"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/prop2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/prune"
+                android:layout_marginBottom="15dp"
+                android:minHeight="45dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerChoice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/fruitsSelection"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/prop3"
+                android:minHeight="45dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/prune"/>
+
+
+            <Spinner
+                android:id="@+id/spinnerChoice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/fruitsSelection"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/prop4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/prune" />
+
+            <Spinner
+                android:id="@+id/spinnerChoice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/fruitsSelection"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/validateChoiceContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choiceContainer"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/validateChoiceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Validate" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/userChoiceContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/validateChoiceContainer"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/testrandom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" /></LinearLayout>
+    <LinearLayout
+        android:id="@+id/recyclerShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userChoiceContainer"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your combinaison is : " />
+
+        <TextView
+            android:id="@+id/printChoice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/printChoice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/printChoice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/printChoice4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerShow"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonBarContainer"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/listeViewFruitsContainer">
+
+        <Button
+            android:id="@+id/menuReturnButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Menu return"
+            android:textSize="10dp" />
+
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/changeDifficultyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Change difficulty"
+            android:textSize="10dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/getHintsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Get hints"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/listeViewFruitsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:weightSum="8">
+
+        <ImageView
+            android:id="@+id/imageBananas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bananes" />
+
+        <ImageView
+            android:id="@+id/imageLemon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/citron" />
+
+        <ImageView
+            android:id="@+id/imageStrawberry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fraise" />
+
+        <ImageView
+            android:id="@+id/imageRaspberries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/framboises" />
+
+        <ImageView
+            android:id="@+id/imageKiwi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kiwi" />
+
+        <ImageView
+            android:id="@+id/imageOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/orange" />
+
+        <ImageView
+            android:id="@+id/imagePlum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prune" />
+
+        <ImageView
+            android:id="@+id/imageGrape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/raisins" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

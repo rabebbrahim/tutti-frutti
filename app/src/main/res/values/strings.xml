@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tutti Fruitti</string>
+    <string name="startMenu">Start</string>
+    <string name="scoreMenu">Score</string>
+    <string name="quitMenu">Quit</string>
+    <string-array name="fruitsSelection">
+        <item>Plum</item>
+        <item>Strawberry</item>
+        <item>Orange</item>
+        <item>Raspberry</item>
+        <item>Kiwi</item>
+        <item>Lemon</item>
+        <item>Grape</item>
+        <item>Banana</item>
+    </string-array>
+</resources>

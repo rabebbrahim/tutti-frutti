@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/choiceContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/scoreContainer"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/prop1"
+            android:layout_width="match_parent"
+            android:minHeight="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/prune" />
+
+
+        <TextView
+            android:id="@+id/recyclerChoice1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/prop2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prune"
+            android:layout_marginBottom="15dp"
+            android:minHeight="45dp"/>
+
+        <TextView
+            android:id="@+id/recyclerChoice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="50dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/prop3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/prune" />
+
+        <TextView
+            android:id="@+id/recyclerChoice3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:minHeight="50dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/prop4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/prune" />
+
+        <TextView
+            android:id="@+id/recyclerChoice4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+</LinearLayout>
